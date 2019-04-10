@@ -1,0 +1,5 @@
+ronconn: 
+  secret: ${random.value}
+  number: ${random.int}
+  name: sun hao
+  desc: ${ronconn.name} is a domain main is new
