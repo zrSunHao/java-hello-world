@@ -33,5 +33,8 @@ public class User {
 		this.date = date;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return "User [id=" + id +",name=" + name + ",createTime" + date + "]";
+	}
 }
