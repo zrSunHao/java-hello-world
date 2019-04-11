@@ -33,14 +33,9 @@ public class FileController {
 		logger.info("上传的后缀名为：" + suffixName);
 		
 		//解决中文问题，liunx下中文路径，图片显示
-		String filePath = "C:\\Users\\x\\AppData\\Local\\Temp\\tomcat.1520919482982287454.8080\\work\\Tomcat\\localhost\\ROOT";
+		String filePath = "D:\\Edu\\ROOT";
 		
 		File dest = new File(filePath + fileName); 
-		
-		Boolean yBoolean = dest.exists();
-		Boolean yyBoolean = dest.getParentFile().exists();
-		String uuuString = dest.getParent();
-		String jjjString = dest.getPath();
 		
 		//检测是否存在目录
 		if(!dest.getParentFile().exists()) {
