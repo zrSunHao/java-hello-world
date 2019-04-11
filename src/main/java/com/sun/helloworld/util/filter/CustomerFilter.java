@@ -8,11 +8,13 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 
 /**
  * @author x
  *自定义 Filter
  */
+@WebFilter(urlPatterns = "/*") //第三种注册
 public class CustomerFilter implements Filter {
 	
 	@Override

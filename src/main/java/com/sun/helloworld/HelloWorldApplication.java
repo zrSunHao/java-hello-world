@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
@@ -19,11 +20,13 @@ import com.sun.helloworld.util.listeners.CustomerListener;
 import com.sun.helloworld.util.servlet.CustomerServlet;
 
 @SpringBootApplication
-public class HelloWorldApplication implements ServletContextInitializer{
-
+@ServletComponentScan
+//public class HelloWorldApplication implements ServletContextInitializer{
+public class HelloWorldApplication {
+	
 	/**
-//	 * 自定义Servlet
-//	 */
+	 * 自定义Servlet
+	 */
 //	@Bean
 //	public ServletRegistrationBean<CustomerServlet> servletRegistrationBean() {
 //		return new ServletRegistrationBean<CustomerServlet>(new CustomerServlet(), "/roncoo");
@@ -48,21 +51,20 @@ public class HelloWorldApplication implements ServletContextInitializer{
 //		return new ServletListenerRegistrationBean<CustomerListener>(new CustomerListener());
 //	}
 //	
-	
+
 	/**
 	 * Servlet、Filter、Listener的另一种注册方式
 	 */
-	@Override
-	public void onStartup(ServletContext servletContext) throws ServletException {
-		
-		servletContext.addServlet("CustomerServlet", new CustomerServlet()).addMapping("/roncoo");
-		
-		servletContext.addFilter("CustomerFilter", new CustomerFilter())
-			.addMappingForServletNames(EnumSet.of(DispatcherType.REQUEST), true, "CustomerServlet");
-		
-		servletContext.addListener(new CustomerListener());
-	}
-	
+//	@Override
+//	public void onStartup(ServletContext servletContext) throws ServletException {
+//		
+//		servletContext.addServlet("CustomerServlet", new CustomerServlet()).addMapping("/roncoo");
+//		
+//		servletContext.addFilter("CustomerFilter", new CustomerFilter())
+//			.addMappingForServletNames(EnumSet.of(DispatcherType.REQUEST), true, "CustomerServlet");
+//		
+//		servletContext.addListener(new CustomerListener());
+//	}
 
 	// 整个项目的入口
 	public static void main(String[] args) {
