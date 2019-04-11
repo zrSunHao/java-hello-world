@@ -1,6 +1,7 @@
 package com.sun.helloworld.controller;
 
 import java.io.File;
+import java.util.UUID;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,8 +33,10 @@ public class FileController {
 		String suffixName = fileName.substring(fileName.lastIndexOf("."));
 		logger.info("上传的后缀名为：" + suffixName);
 		
-		//解决中文问题，liunx下中文路径，图片显示
+		//文件上传路径
 		String filePath = "D:\\Edu\\ROOT";
+		//解决中文问题，liunx下中文路径，图片显示
+		fileName = UUID.randomUUID() + suffixName;
 		
 		File dest = new File(filePath + fileName); 
 		

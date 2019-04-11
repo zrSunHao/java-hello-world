@@ -7,6 +7,20 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
         #设置时区
     time-zone: Asia/Chongqing
+  servlet:
+    multipart:
+      #是否支持文件上传
+      enabled: true
+      #支持文件写入磁盘
+      file-size-threshold: 0
+      #上传文件的临时目录 
+      location: D:\\temp
+      #最大支持文件大小
+      max-file-size: 10240
+      #最大支持请求大小
+      max-request-size: 102400
+        
+      
 
 #端口号配置
 server:
