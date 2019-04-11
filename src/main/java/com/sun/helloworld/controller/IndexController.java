@@ -30,9 +30,10 @@ public class IndexController {
 
 	@RequestMapping(value = "")
 	public String index() {
-		throw new RuntimeException("测试异常");
 		
-		//return "Hello World!";
+		//throw new RuntimeException("测试异常");
+		
+		return "Hello World!";
 	}
 
 	@RequestMapping(value = "get")

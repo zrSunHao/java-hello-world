@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
- * @author sun hao
+ * @author sun
  * 异常处理
  */
 @ControllerAdvice
@@ -16,15 +16,15 @@ public class BizException {
 
 	/**
      *  拦截Exception类的异常
-     * @param e
-     * @return
      */
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public Map<String,Object> exceptionHandler(Exception ex){
+    	
         Map<String,Object> result = new HashMap<String,Object>();
         result.put("respCode", "Exception");
         result.put("respMsg", ex.getMessage());
+        
         //正常开发中，可创建一个统一响应实体，如CommonResp
         return result; 
     }
@@ -39,6 +39,7 @@ public class BizException {
 		Map<String,Object> result = new HashMap<String,Object>();
         result.put("respCode", "RuntimeException");
         result.put("respMsg", ex.getMessage());
+        
         //正常开发中，可创建一个统一响应实体，如CommonResp
         return result; 
 	}
