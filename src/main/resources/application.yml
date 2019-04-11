@@ -2,12 +2,19 @@ spring:
   profiles:
     active:
     - dev
+  #数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/java-helloworld?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    username: 
+    password: 
+    driver-class-name: com.mysql.jdbc.Driver
   jackson:
         #时间格式化
     date-format: yyyy-MM-dd HH:mm:ss
         #设置时区
     time-zone: Asia/Chongqing
   servlet:
+    #文件上传配置
     multipart:
       #是否支持文件上传
       enabled: true
@@ -19,6 +26,7 @@ spring:
       max-file-size: 10240
       #最大支持请求大小
       max-request-size: 102400
+  
         
       
 
