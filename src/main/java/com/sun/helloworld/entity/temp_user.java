@@ -1,8 +1,8 @@
-package com.sun.helloworld.bean;
+package com.sun.helloworld.entity;
 
 import java.util.Date;
 
-public class User {
+public class temp_user {
 
 	private int id;
 	private String name;
