@@ -12,7 +12,7 @@ import com.sun.helloworld.service.tmp_gpsinfoService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(value = "demo测试")
+@Api(tags = "demo测试")
 @RestController
 @RequestMapping("/demo")
 public class DemoController {
