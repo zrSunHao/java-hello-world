@@ -19,7 +19,7 @@ import com.sun.helloworld.service.userService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(tags = "起始")
+@Api(tags = "IndexController")
 @RestController
 @RequestMapping(value = "/index")
 public class IndexController {

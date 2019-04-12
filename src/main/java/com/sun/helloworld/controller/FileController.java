@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(tags = "文件上传api")
+@Api(tags = "FileController")
 @RestController
 @RequestMapping(value = "/file")
 public class FileController {

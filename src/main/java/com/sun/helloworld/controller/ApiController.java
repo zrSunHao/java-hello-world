@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 
-@Api(tags = "api测试")
+@Api(tags = "ApiController")
 @RestController
 @RequestMapping("/api")
 public class ApiController {
