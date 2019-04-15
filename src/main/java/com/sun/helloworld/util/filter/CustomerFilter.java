@@ -24,7 +24,7 @@ public class CustomerFilter implements Filter {
 	
 	@Override
 	public void doFilter(ServletRequest request,ServletResponse response,FilterChain chain) throws IOException, ServletException {
-		System.out.println("do filter");
+		System.out.println("正在 do filter");
 		chain.doFilter(request, response);
 	}
 
