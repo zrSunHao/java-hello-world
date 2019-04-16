@@ -20,4 +20,6 @@ public class tmp_gpsinfoService extends BaseService {
 
         return tmpgpsinfoMapper.selectOne(queryWrapper);
     }
+    
+    
 }
