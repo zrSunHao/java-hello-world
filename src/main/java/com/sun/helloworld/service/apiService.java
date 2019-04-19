@@ -18,20 +18,20 @@ public class apiService {
 
 		RevokeOAResult result = new RevokeOAResult();
 
-		if (company == null || company.CollecterName == null || company.CollecterName.equals("")
-				|| company.CollecterNo == null || company.CollecterNo.equals("")) {
+		if (company == null || company.collecterName == null || company.collecterName.equals("")
+				|| company.collecterNo == null || company.collecterNo.equals("")) {
 			result.errorMessage = "未通过数据校验";
 			result.success = false;
 			result.hasErrors = false;
 		}
 
 		business_revoke_companyinfo_temp entity = new business_revoke_companyinfo_temp();
-		entity.collecter_name = company.CollecterName;
-		entity.collecter_no = company.CollecterNo;
-		entity.account_name = company.AccountName;
-		entity.account_no = company.AccountNo;
-		entity.contract_flag = company.ContractFlag;
-		entity.deleted = company.Deleted;
+		entity.collecter_name = company.collecterName;
+		entity.collecter_no = company.collecterNo;
+		entity.account_name = company.accountName;
+		entity.account_no = company.accountNo;
+		entity.contract_flag = company.contractFlag;
+		entity.deleted = company.deleted;
 		
 		
 		int num = mapper.insert(entity);

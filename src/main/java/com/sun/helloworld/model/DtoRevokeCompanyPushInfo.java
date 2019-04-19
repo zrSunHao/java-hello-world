@@ -2,16 +2,16 @@ package com.sun.helloworld.model;
 
 public class DtoRevokeCompanyPushInfo {
 
-	public String CollecterNo;
+	public String collecterNo;
 	
-	public String CollecterName;
+	public String collecterName;
 	
-	public String ContractFlag;
+	public String contractFlag;
 	
-	public String AccountName;
+	public String accountName;
 	
-	public String AccountNo;
+	public String accountNo;
 	
-	public String Deleted;
+	public String deleted;
 	
 }

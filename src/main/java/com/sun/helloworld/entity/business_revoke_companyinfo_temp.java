@@ -1,10 +1,11 @@
 package com.sun.helloworld.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 
 public class business_revoke_companyinfo_temp {
 
-	@TableId
+	@TableId(type = IdType.AUTO)
 	public Long id;
 
 	public String collecter_no;
